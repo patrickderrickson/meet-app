@@ -19,7 +19,7 @@ const credentials = {
   auth_uri: "https://accounts.google.com/o/oauth2/auth",
   token_uri: "https://oauth2.googleapis.com/token",
   auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
-  redirect_uris: ["https://patrickderrickson.github.io/meet-app/"],
+  redirect_uris: ["https://patrickderrickson.github.io/meet-app"],
   javascript_origins: ["https://patrickderrickson.github.io", "http://localhost:3000", "http://127.0.0.1:8080"],
 };
 const { client_secret, client_id, redirect_uris, calendar_id } = credentials;
@@ -86,6 +86,9 @@ module.exports.getAccessToken = async (event) => {
     .then((token) => {
       // Respond with OAuth token 
       return {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
         statusCode: 200,
         body: JSON.stringify(token),
       };
@@ -94,6 +97,9 @@ module.exports.getAccessToken = async (event) => {
       // Handle error
       console.error(err);
       return {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
         statusCode: 500,
         body: JSON.stringify(err),
       };
