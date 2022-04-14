@@ -3,6 +3,7 @@ import Event from './Event';
 
 class EventList extends Component {
   render() {
+    let events = [];
     return (
         <ul className="EventList">
             {events.map(event =>
