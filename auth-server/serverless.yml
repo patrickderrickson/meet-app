@@ -1,3 +1,5 @@
+org: patrickderrickson
+app: auth-server
 service: auth-server
 
 provider:
