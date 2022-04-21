@@ -2,14 +2,13 @@ import { loadFeature, defineFeature } from 'jest-cucumber';
 import React from 'react';
 import { mount } from 'enzyme';
 import App from '../App';
-import { mount, shallow } from 'enzyme';
 
 const feature = loadFeature('./src/features/showHideAnEventsDetails.feature');
 
 defineFeature(feature, test => {
 
     let AppWrapper;
-    test(' An event element is collapsed by default.', ({ given, when, then }) => {
+    test('An event element is collapsed by default.', ({ given, when, then }) => {
       given('user views the main page', () => {
         AppWrapper = mount(<App />);
       });
@@ -28,7 +27,7 @@ defineFeature(feature, test => {
     test('User can expand an event to see its details', ({ given, when, then }) => {
 
 
-        given('user finds an event they want to view', () => {
+        given('user finds an event they want to view', async() => {
             AppWrapper = await mount(<App />);
         });
   
