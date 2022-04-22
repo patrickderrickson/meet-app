@@ -4,11 +4,12 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import { getEvents, extractLocations  } from './api';
 import './nprogress.css';
+import { mockData } from "./mock-data"
 
 
 class App extends Component {
   state = {
-    events: [],
+    events: mockData,
     locations: []
   }
 

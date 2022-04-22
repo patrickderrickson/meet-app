@@ -52,6 +52,3 @@ When the user scrolls down the page
 Then the user should see a chart with upcoming events
 
 
-GET - https://ddyncsywl8.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url
-  GET - https://ddyncsywl8.execute-api.eu-central-1.amazonaws.com/dev/api/token/{code}
-  GET - https://ddyncsywl8.execute-api.eu-central-1.amazonaws.com/dev/api/get-events/{access_token}
