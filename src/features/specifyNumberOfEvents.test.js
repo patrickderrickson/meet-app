@@ -24,7 +24,7 @@ defineFeature(feature, test => {
       });
     });
   
-    test('User can change the number of events they want to see.', ({ given, when, then }) => {
+    test('User can change the number of events they want to see', ({ given, when, then }) => {
 
 
         given('user opens the web page', async() => {

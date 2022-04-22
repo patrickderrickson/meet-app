@@ -8,6 +8,6 @@ import { mockData } from '../mock-data';
 
 test('render correct number of events', () => {
     const EventListWrapper = shallow(<EventList events={mockData} />);
-    expect(EventListWrapper.find(Event)).toHaveLength(0);
+    expect(EventListWrapper.find(Event)).toHaveLength(2);
   });
     

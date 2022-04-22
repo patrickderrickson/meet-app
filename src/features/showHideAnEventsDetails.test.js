@@ -8,7 +8,7 @@ const feature = loadFeature('./src/features/showHideAnEventsDetails.feature');
 defineFeature(feature, test => {
 
     let AppWrapper;
-    test('An event element is collapsed by default.', ({ given, when, then }) => {
+    test('An event element is collapsed by default', ({ given, when, then }) => {
       given('user views the main page', () => {
         AppWrapper = mount(<App />);
       });
@@ -42,7 +42,7 @@ defineFeature(feature, test => {
       });
   
   
-    test('User can collapse an event to hide its details.', ({ given, and, when, then }) => {
+    test('User can collapse an event to hide its details', ({ given, and, when, then }) => {
 
         let AppWrapper;
 

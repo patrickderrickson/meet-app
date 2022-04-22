@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 class Event extends Component {
   render() {
-    console.log(this.props);
     const { event } = this.props;
     return (
       <div className="event">
