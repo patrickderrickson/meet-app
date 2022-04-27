@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import EventGenre from './EventGenre';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
@@ -53,9 +54,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Meet App</h1>
+        <h3>Select Your City</h3>
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
         <h4>Events in each city</h4>
+
+        <div className='data-vis-wrapper'>
+          <EventGenre events={this.state.events} />
 
         <ResponsiveContainer height={400} >
 
@@ -71,6 +77,7 @@ class App extends Component {
           <Scatter data={this.getData()} fill="#8884d8" />
         </ScatterChart>
         </ResponsiveContainer>
+        </div>
         <EventList events={this.state.events} />
       </div>
     );
